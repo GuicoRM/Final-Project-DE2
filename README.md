@@ -41,9 +41,9 @@ In the following lines it will be explain different functions of this modules an
 
 - **AMega328P microcontroller**
 
-This module is similar to the microcontroller we have used for the semester. 
+    This module is similar to the microcontroller we have used for the semester. 
 
-You can find the datasheet ['*on this link*'](http://ww1.microchip.com/downloads/en/DeviceDoc/ATmega48A-PA-88A-PA-168A-PA-328-P-DS-DS40002061B.pdf).
+    You can find the datasheet ['*on this link*'](http://ww1.microchip.com/downloads/en/DeviceDoc/ATmega48A-PA-88A-PA-168A-PA-328-P-DS-DS40002061B.pdf).
 
 - **Keypad**
 
@@ -63,7 +63,7 @@ One of the others hardware modules we have introduced on this topic is the speak
 
 - **LCD screen**
 
-- **LEDs*
+- **LEDs**
 
 ## Code description and simulations
 Write your text here.
