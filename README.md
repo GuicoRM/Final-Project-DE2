@@ -41,23 +41,23 @@ In the following lines it will be explain different functions of this modules an
 
 - **AMega328P microcontroller**
 
-        This module is similar to the microcontroller we have used for the semester. 
+    This module is similar to the microcontroller we have used for the semester. 
 
-        You can find the datasheet ['*on this link*'](http://ww1.microchip.com/downloads/en/DeviceDoc/ATmega48A-PA-88A-PA-168A-PA-328-P-DS-DS40002061B.pdf).
+    You can find the datasheet ['*on this link*'](http://ww1.microchip.com/downloads/en/DeviceDoc/ATmega48A-PA-88A-PA-168A-PA-328-P-DS-DS40002061B.pdf).
 
 - **Keypad**
 
-        The main different hardware module we have introduced on this topic is the keypad.
+    The main different hardware module we have introduced on this topic is the keypad.
 
-        It consists on several push button connected between them by **ROWS** and **COLUMNS**, in our case we have 4 ROWS and 3 COLUMNS.
+    It consists on several push button connected between them by **ROWS** and **COLUMNS**, in our case we have 4 ROWS and 3 COLUMNS.
 
-        It is possible to configure keypad using some libraries by default included in Arduino, but we have programmed our own.
+    It is possible to configure keypad using some libraries by default included in Arduino, but we have programmed our own.
 
-        You can find the connection of keypad and how it works ['*on this link*'](https://www.circuitbasics.com/how-to-set-up-a-keypad-on-an-arduino/).
+    You can find the connection of keypad and how it works ['*on this link*'](https://www.circuitbasics.com/how-to-set-up-a-keypad-on-an-arduino/).
 
 - **Speaker**
 
-        One of the others hardware modules we have introduced on this topic is the speaker.
+    One of the others hardware modules we have introduced on this topic is the speaker.
 
 - **Relay**
 
