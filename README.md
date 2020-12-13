@@ -1,21 +1,26 @@
 # :lock: Application of the door lock system :lock:
 
 ## Team members
-Guillermo Cortés Orellana :bowtie:. ['*Personal repository*'](https://github.com/GuicoRM)
-Omar Bin Rahman :bowtie:. ['*Personal repository*'](https://moodle.vutbr.cz/course/view.php?id=229631)
+Guillermo Cortés Orellana. ['*Personal repository*'](https://github.com/GuicoRM) :bowtie:
+
+Omar Bin Rahman. ['*Personal repository*'](https://moodle.vutbr.cz/course/view.php?id=229631) :bowtie:
 
 ## Project objectives
 Current project it has been designed as final project of the subject **Digital Electronics 2** at Brno University Of Technology.
 
-The main purpose of the project is to program security software for door lock system based on Arduino.
+The main purpose of the project is program security software for door lock system based on Arduino.
 
-Programmers have divided the project in several modules, such as:
+Door lock system is divided in several hardware modules, such as:
 
-- [x] 1. Keypad
-- [x] 2. LCD screen
-- [x] 3. LEDs
-- [x] 4. Interrupts, timers
-- [x] 5. Speaker
+- [x] 1. ATMega328P microcontroller
+- [x] 2. Keypad
+- [x] 3. LCD screen
+- [x] 4. Speaker
+- [x] 5. LEDs
+
+In the following lines it will be explain different functions of this modules and their relation with complete system:
+
+- AMega328P microcontroller
 
 #### Hardware description
 Write your text here.
