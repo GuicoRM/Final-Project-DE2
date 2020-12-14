@@ -16,6 +16,10 @@ Initially, the system's door will stay closed. The user will have to enter her/h
 
 On the other hand, at the moment the user enters first digit of the password, he/she will have **5 seconds** to complete the rest of the password, otherwise, he/she will have to enter again the code.
 
+The following image shows final circuit of the system:
+
+![Captura](https://user-images.githubusercontent.com/71753644/102131367-648af200-3e52-11eb-8c5f-f0b9f3c1e197.PNG)
+
 All the process is divided in several states:
 
 1. **START**
