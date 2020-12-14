@@ -68,7 +68,7 @@ After final state (any of its variants), system will return to START state.
 
 The following state diagram shows different states of the system:
 
-![Captura](https://user-images.githubusercontent.com/71753644/102140206-365fdf00-3e5f-11eb-9e79-4b6f14d22815.PNG)
+![Captura](https://user-images.githubusercontent.com/71753644/102142331-7e343580-3e62-11eb-915e-22efe96c859c.PNG)
 
 ## Hardware description
 Door lock system is divided in several hardware modules, such as:
@@ -127,6 +127,8 @@ Write your text here.
 
 ## Video/Animation
 You can find personal video where all the previous features of the system described ['*on this link*'](https://www.youtube.com/watch?v=qahc68WCkCg&feature=youtu.be).
+
+**Note:** background noise is from the computer itself, not the door security system.
 
 ## References
 1. ['*How keypad works*'](https://arduinogetstarted.com/tutorials/arduino-keypad).
