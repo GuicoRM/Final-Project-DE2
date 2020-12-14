@@ -38,13 +38,13 @@ While user introduces the password.
 
 There will be 3 possibilities:
 
-- 3.1 **Counter key < 5" AND correct key**
+- 3.1 **Counter password < 5" AND correct password**
 
 If the user enters correct password in a period less than 5 seconds since he/she entered first digit, door will be open (relay), green LED will be on, speaker will play simple buzz and there will display identification message on LCD screen for 5 seconds.
 
 ![Captura](https://user-images.githubusercontent.com/71753644/102140972-622f9480-3e60-11eb-9ef1-32ad64f6852f.PNG)
 
-- 3.2 **Counter key > 5" OR incorrect key**
+- 3.2 **Counter password > 5" OR incorrect password**
 
 If the user enters incorrect password or he/she spent more than 5 seconds since first digit was introduced, door will remain closed (relay), red LED will be on, speaker will be mute and there will display warning message on LCD screen for 5 seconds.
 
@@ -120,7 +120,7 @@ In the following lines it will be explain different functions of this modules an
 Write your text here.
 
 ## Video/Animation
-You can find personal video where all the previous features of the system described ['*on this link*'](https://www.youtube.com/watch?v=GhaDPUAOq3g&feature=youtu.be).
+You can find personal video where all the previous features of the system described ['*on this link*'](https://www.youtube.com/watch?v=qahc68WCkCg&feature=youtu.be).
 
 ## References
 1. ['*How keypad works*'](https://arduinogetstarted.com/tutorials/arduino-keypad).
