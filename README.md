@@ -16,7 +16,7 @@ Initially, the system's door will stay closed. The user will have to enter her/h
 
 On the other hand, at the moment the user enters first digit of the password, he/she will have **5 seconds** to complete the rest of the password, otherwise, he/she will have to enter again the code.
 
-The following image shows final circuit of the system:
+The following image shows circuit of the system:
 
 ![Captura](https://user-images.githubusercontent.com/71753644/102131928-39ed6900-3e53-11eb-89f6-758fdda11748.PNG)
 
@@ -26,13 +26,13 @@ All the process is divided in several states:
 
 This is the initial state. Door will be close (relay), state LEDs will be off, speaker will be mute and there will display welcome message on LCD screen.
 
-![Captura](https://user-images.githubusercontent.com/71753644/102135004-99e60e80-3e57-11eb-9b84-860305408f09.PNG)
+![Captura](https://user-images.githubusercontent.com/71753644/102140762-0b29bf80-3e60-11eb-9cc1-5cc54c87a2e5.PNG)
 
 2. **Intermediate state**
 
 While user introduces the password.
 
-![Captura](https://user-images.githubusercontent.com/71753644/102135169-e0d40400-3e57-11eb-845f-f92fda4951bc.PNG)
+![Captura](https://user-images.githubusercontent.com/71753644/102140881-3b715e00-3e60-11eb-9316-0371a080b5bd.PNG)
 
 3. **Final state**
 
@@ -42,19 +42,19 @@ There will be 3 possibilities:
 
 If the user enters correct password in a period less than 5 seconds since he/she entered first digit, door will be open (relay), green LED will be on, speaker will play simple buzz and there will display identification message on LCD screen for 5 seconds.
 
-![Captura](https://user-images.githubusercontent.com/71753644/102135294-0c56ee80-3e58-11eb-88c2-0435c20fcbb7.PNG)
+![Captura](https://user-images.githubusercontent.com/71753644/102140972-622f9480-3e60-11eb-9ef1-32ad64f6852f.PNG)
 
 - 3.2 **Counter key > 5" OR incorrect key**
 
 If the user enters incorrect password or he/she spent more than 5 seconds since first digit was introduced, door will remain closed (relay), red LED will be on, speaker will be mute and there will display warning message on LCD screen for 5 seconds.
 
-![Captura](https://user-images.githubusercontent.com/71753644/102140528-a1a9b100-3e5f-11eb-937c-4c0036b2fa11.PNG)
+![Captura](https://user-images.githubusercontent.com/71753644/102141102-9440f680-3e60-11eb-8dd5-12b048a79b72.PNG)
 
 - 3.3 **Incorrect password for 3 times**
 
 If the user enters incorrect password 3 times in a row, door will remain closed (relay), red LED will blink, speaker will be play simple buzz each 1 second and there will display warning message on LCD screen for 5 seconds.
 
-![Captura](https://user-images.githubusercontent.com/71753644/102135742-b171c700-3e58-11eb-955e-e65f5c12f27c.PNG)
+![Captura](https://user-images.githubusercontent.com/71753644/102141208-bf2b4a80-3e60-11eb-90c2-58dedaf274cd.PNG)
 
 After final state (any of its variants), system will return to START state.
 
