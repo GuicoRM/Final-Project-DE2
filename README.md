@@ -48,6 +48,11 @@ If the user enters correct password in a period less than 5 seconds since he/she
 
 If the user enters incorrect password or he/she spent more than 5 seconds since first digit was introduced, door will remain closed (relay), red LED will be on, speaker will be mute and there will display warning message on LCD screen for 5 seconds.
 
+If counter password > 5 seconds:
+![Captura](https://user-images.githubusercontent.com/71753644/102141987-fb12df80-3e61-11eb-852d-e675332aceb1.PNG)
+
+If wrong wrong password:
+
 ![Captura](https://user-images.githubusercontent.com/71753644/102141102-9440f680-3e60-11eb-8dd5-12b048a79b72.PNG)
 
 - 3.3 **Incorrect password for 3 times**
