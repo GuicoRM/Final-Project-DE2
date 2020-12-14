@@ -1,9 +1,9 @@
 # :lock: Application of the door lock system :lock:
 
 ### Team members
-Guillermo Cortés Orellana. ['*Personal repository*'](https://github.com/GuicoRM) :bowtie:
+@Guillermo Cortés Orellana. ['*Personal repository*'](https://github.com/GuicoRM) :bowtie:
 
-Omar Bin Rahman. ['*Personal repository*'](https://github.com/omarbin) :bowtie:
+@Omar Bin Rahman. ['*Personal repository*'](https://github.com/omarbin) :bowtie:
 
 ### Project objectives
 Current project it has been designed as final project of the subject **Digital Electronics 2** at Brno University Of Technology.
