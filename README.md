@@ -88,7 +88,7 @@ In the following lines it will be explain different functions of this modules an
 Write your text here.
 
 ## Video/Animation
-You can find a video which shows all features of the system ['*on this link*'] (https://www.youtube.com/watch?v=GhaDPUAOq3g&feature=youtu.be)
+You can find a personal video where all the previous features of the system described ['*on this link*'](https://www.youtube.com/watch?v=GhaDPUAOq3g&feature=youtu.be)
 
 ## References
 Write your text here.
