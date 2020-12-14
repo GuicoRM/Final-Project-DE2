@@ -60,6 +60,10 @@ After final state (any of its variants), system will return to START state.
 
 **Note:** program will never stop due to it is a simulation with learning purposes.
 
+The following state diagram shows different states of the system:
+
+![Captura](https://user-images.githubusercontent.com/71753644/102140206-365fdf00-3e5f-11eb-9e79-4b6f14d22815.PNG)
+
 ## Hardware description
 Door lock system is divided in several hardware modules, such as:
 
