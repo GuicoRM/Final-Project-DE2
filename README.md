@@ -26,9 +26,13 @@ All the process is divided in several states:
 
 This is the initial state. Door will be close (relay), state LEDs will be off, speaker will be mute and there will display welcome message on LCD screen.
 
+![Captura](https://user-images.githubusercontent.com/71753644/102135004-99e60e80-3e57-11eb-9b84-860305408f09.PNG)
+
 2. **Intermediate state**
 
 While user introduces the password.
+
+![Captura](https://user-images.githubusercontent.com/71753644/102135169-e0d40400-3e57-11eb-845f-f92fda4951bc.PNG)
 
 3. **Final state**
 
@@ -38,13 +42,19 @@ There will be 3 possibilities:
 
 If the user enters correct password in a period less than 5 seconds since he/she entered first digit, door will be open (relay), green LED will be on, speaker will play simple buzz and there will display identification message on LCD screen for 5 seconds.
 
+![Captura](https://user-images.githubusercontent.com/71753644/102135294-0c56ee80-3e58-11eb-88c2-0435c20fcbb7.PNG)
+
 - 3.2 **Counter key > 5" OR incorrect key**
 
 If the user enters incorrect password or he/she spent more than 5 seconds since first digit was introduced, door will remain closed (relay), red LED will be on, speaker will be mute and there will display warning message on LCD screen for 5 seconds.
 
+![Captura](https://user-images.githubusercontent.com/71753644/102135431-445e3180-3e58-11eb-897e-5d601167c344.PNG)
+
 - 3.3 **Incorrect password for 3 times**
 
-If the user enters incorrect password 3  times in a row, door will remain closed (relay), red LED will blink, speaker will be play simple buzz each 1 second and there will display warning message on LCD screen for 5 seconds.
+If the user enters incorrect password 3 times in a row, door will remain closed (relay), red LED will blink, speaker will be play simple buzz each 1 second and there will display warning message on LCD screen for 5 seconds.
+
+![Captura](https://user-images.githubusercontent.com/71753644/102135742-b171c700-3e58-11eb-955e-e65f5c12f27c.PNG)
 
 After final state (any of its variants), system will return to START state.
 
@@ -74,7 +84,7 @@ In the following lines it will be explain different functions of this modules an
 
     It consists on several push button connected between them by **ROWS** and **COLUMNS**, in our case we have 4 ROWS and 3 COLUMNS.
 
-    It is possible to configure keypad using some libraries by default included in Arduino, but we have programmed our own: `keypad.c`.
+    It is possible to configure keypad using some libraries by default included in Arduino, but we have programmed our own: `keypad.c`. 
 
     You can find the connection of keypad and how it works ['*on this link*'](https://www.circuitbasics.com/how-to-set-up-a-keypad-on-an-arduino/).
 
