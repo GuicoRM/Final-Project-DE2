@@ -105,4 +105,9 @@ Write your text here.
 You can find personal video where all the previous features of the system described ['*on this link*'](https://www.youtube.com/watch?v=GhaDPUAOq3g&feature=youtu.be).
 
 ## References
-Write your text here.
+1. ['*How keypad works*'](https://arduinogetstarted.com/tutorials/arduino-keypad).
+
+2. ['*How speaker works*'](https://shallowsky.com/arduino/class/buzzer.html#:~:text=A%20%22piezo%20buzzer%22%20is%20basically,the%20crystal%20can%20make%20sound.).
+
+3. ['*How relays works*'](https://maker.pro/arduino/projects/driving-a-relay-with-an-arduino#:~:text=*%20A%20relay%20basically%20allows%20a,off%20a%20higher%20power%20circuit).
+
