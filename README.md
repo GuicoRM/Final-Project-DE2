@@ -92,13 +92,13 @@ In the following lines it will be explain different functions of this modules an
 
 - **LCD screen**
 
-    This module is similar to the LCD screen we have used for the semester. 
+    This module is similar to the LCD screen we have used for the semester. We will use it to display different messages.
 
     You can find the explanations on ['*Mr.Fryza GitHub*'](https://github.com/tomas-fryza/Digital-electronics-2/tree/master/Labs/06-lcd).
 
 - **LEDs**
 
-    This module is similar to the LEDs we have used for the semester. 
+    This module is similar to the LEDs we have used for the semester. We will use them to signal different events.
 
     You can find the explanations on ['*Mr.Fryza GitHub*'](https://github.com/tomas-fryza/Digital-electronics-2/tree/master/Labs/02-leds).
 
