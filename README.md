@@ -66,7 +66,7 @@ In the following lines it will be explain different functions of this modules an
 
 - **Keypad**
 
-    The main different hardware module we have introduced on this topic is the keypad.
+    The main different hardware module we have introduced on this topic is the **keypad**.
 
     It consists on several push button connected between them by **ROWS** and **COLUMNS**, in our case we have 4 ROWS and 3 COLUMNS.
 
@@ -76,19 +76,33 @@ In the following lines it will be explain different functions of this modules an
 
 - **Speaker**
 
-    One of the others hardware modules we have introduced on this topic is the speaker.
+    One of the others hardware modules we have introduced on this topic is the **speaker**. Its purpose is plays simple buzz when the user enter the password.
+    
+    The way we have to get the sound is setting the pin of the speaker as an output and sending high level to play the buzz. 
 
 - **Relay**
 
+    One of the others hardware modules we have introduced on this topic is the **relay**. We will use it to simulate a door.
+    
+    You can find the connection of relay and how it works ['*on this link*'](https://www.circuitbasics.com/setting-up-a-5v-relay-on-the-arduino/).
+
 - **LCD screen**
 
+    This module is similar to the LCD screen we have used for the semester. 
+
+    You can find the explanations on ['*Mr.Fryza GitHub*'](https://github.com/tomas-fryza/Digital-electronics-2/tree/master/Labs/06-lcd).
+
 - **LEDs**
+
+    This module is similar to the LEDs we have used for the semester. 
+
+    You can find the explanations on ['*Mr.Fryza GitHub*'](https://github.com/tomas-fryza/Digital-electronics-2/tree/master/Labs/02-leds).
 
 ## Code description and simulations
 Write your text here.
 
 ## Video/Animation
-You can find a personal video where all the previous features of the system described ['*on this link*'](https://www.youtube.com/watch?v=GhaDPUAOq3g&feature=youtu.be)
+You can find a personal video where all the previous features of the system described ['*on this link*'](https://www.youtube.com/watch?v=GhaDPUAOq3g&feature=youtu.be).
 
 ## References
 Write your text here.
