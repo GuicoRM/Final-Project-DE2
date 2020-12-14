@@ -10,12 +10,16 @@ Current project it has been designed as final project of the subject **Digital E
 
 The main purpose of the project is program security software for door lock system based on Arduino.
 
-There are only 4 possible combination
+System counts with 4 possible passwords made for 4 digits which allow the user open the door.
 
-It is divided in several states:
+Initially, the system's door will stay closed. The user will have to enter her/his personal password in order to open it (as it has been said, there are only 4 possible combinations). If the user enters **correct password**, the door will open and the user can access to the hall. If on the contrary, the user enters **wrong password**, he/she will have another 2 opportunities (in total 3) to unlock the door. Just in case the user introduces wrong password 3 times in a row, the system will be locked and the access will be forbidden.
+
+On the other hand, at the moment the user enters first digit of the password, he/she will have **5 seconds** to complete the rest of the password, otherwise, he/she will have to enter again the code.
+
+All the process is divided in several states:
 
 1. **START**
-
+This is the initial state. Door will be close (relay), state LEDs off and there will display welcome message on LCD screen.
 
 2. **Intermediate state**
 
@@ -25,7 +29,7 @@ It is divided in several states:
 
 3. **Wait**
 
-**Note:** the program will never stop due to it is a simulation for learning purposes
+**Note:** the program will never stop due to it is a simulation with learning purposes.
 
 ## Hardware description
 Door lock system is divided in several hardware modules, such as:
