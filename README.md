@@ -19,17 +19,32 @@ On the other hand, at the moment the user enters first digit of the password, he
 All the process is divided in several states:
 
 1. **START**
-This is the initial state. Door will be close (relay), state LEDs off and there will display welcome message on LCD screen.
+
+This is the initial state. Door will be close (relay), state LEDs will be off, speaker will be mute and there will display welcome message on LCD screen.
 
 2. **Intermediate state**
 
-- 2.1 **Counter key < 5" AND correct key**
+While user introduces the password.
 
-- 2.2 **Counter key > 5" OR incorrect key**
+3. **Final state**
 
-3. **Wait**
+There will be 3 possibilities:
 
-**Note:** the program will never stop due to it is a simulation with learning purposes.
+- 3.1 **Counter key < 5" AND correct key**
+
+If the user enters correct password in a period less than 5 seconds since he/she entered first digit, door will be open (relay), green LED will be on, speaker will play simple buzz and there will display identification message on LCD screen for 5 seconds.
+
+- 3.2 **Counter key > 5" OR incorrect key**
+
+If the user enters incorrect password or he/she spent more than 5 seconds since first digit was introduced, door will remain closed (relay), red LED will be on, speaker will be mute and there will display warning message on LCD screen for 5 seconds.
+
+- 3.3 **Incorrect password for 3 times**
+
+If the user enters incorrect password 3  times in a row, door will remain closed (relay), red LED will blink, speaker will be play simple buzz each 1 second and there will display warning message on LCD screen for 5 seconds.
+
+After final state (any of its variants), system will return to START state.
+
+**Note:** program will never stop due to it is a simulation with learning purposes.
 
 ## Hardware description
 Door lock system is divided in several hardware modules, such as:
@@ -73,7 +88,7 @@ In the following lines it will be explain different functions of this modules an
 Write your text here.
 
 ## Video/Animation
-Write your text here.
+You can find a video which shows all features of the system ['*on this link*'] (https://www.youtube.com/watch?v=GhaDPUAOq3g&feature=youtu.be)
 
 ## References
 Write your text here.
