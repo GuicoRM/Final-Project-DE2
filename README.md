@@ -18,7 +18,7 @@ On the other hand, at the moment the user enters first digit of the password, he
 
 The following image shows final circuit of the system:
 
-![Captura](https://user-images.githubusercontent.com/71753644/102131367-648af200-3e52-11eb-8c5f-f0b9f3c1e197.PNG)
+                            ![Captura](https://user-images.githubusercontent.com/71753644/102131367-648af200-3e52-11eb-8c5f-f0b9f3c1e197.PNG)
 
 All the process is divided in several states:
 
