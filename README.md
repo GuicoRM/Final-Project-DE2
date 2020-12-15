@@ -134,8 +134,7 @@ The structure of the program is similar to other programs students created durin
 We divided `main.c` in 3 different parts:
 
 - Defines, includes and global variables
--- rrgrg
-- -fgrg 
+  - Hello
 - Main function
 - ISR
 
