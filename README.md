@@ -134,9 +134,14 @@ The structure of the program is similar to other programs students created durin
 We divided `main.c` in 3 different parts:
 
 - Defines, includes and global variables
-  - Hello
+  - Configuration of different pins, global variables and libraries we will use.
+  
 - Main function
+  - Configuration area. Different TIMERs and other devices will be configured.
+  
 - ISR
+  - Many ISR have been used, each of them, configured with previous TIMERs:
+    - **f**
 
 You can find here complete description of [*main.c*](https://github.com/GuicoRM/Final-Project-DE2/blob/main/Final_Project_DE2/Final_Project/Final_Project/main.c).
 
