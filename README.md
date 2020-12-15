@@ -92,7 +92,7 @@ In the following lines it will be explained different functions of this modules 
 
     The main different hardware module we have introduced on this topic is the **keypad**.
 
-    It consists on several push button connected between them by **ROWS** and **COLUMNS**, in our case we have 4 ROWS and 3 COLUMNS.
+    It consists on several push button connected between them by **ROWS** and **COLUMNS**. In our case, we have 4 ROWS and 3 COLUMNS.
 
     It is possible to configure keypad using some libraries by default included in Arduino, but we have programmed our own: `keypad.c`. 
 
