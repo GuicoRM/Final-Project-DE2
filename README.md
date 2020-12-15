@@ -24,13 +24,13 @@ All the process is divided in several states:
 
 1. **START**
 
-This is the initial state. Door will be close (relay), state LEDs will be off, speaker will be mute and there will display welcome message on LCD screen.
+This is the initial state. Door will be close (relay), state LEDs will be off, speaker will be mute and there will display welcome message on LCD screen:
 
 ![Captura](https://user-images.githubusercontent.com/71753644/102140762-0b29bf80-3e60-11eb-9cc1-5cc54c87a2e5.PNG)
 
 2. **Intermediate state**
 
-While user introduces the password.
+While user introduces the password:
 
 ![Captura](https://user-images.githubusercontent.com/71753644/102140881-3b715e00-3e60-11eb-9316-0371a080b5bd.PNG)
 
@@ -40,13 +40,13 @@ There will be 3 possibilities:
 
 - 3.1 **Counter password < 5" AND correct password**
 
-If the user enters correct password in a period less than 5 seconds since he/she entered first digit, door will be open (relay), green LED will be on, speaker will play simple buzz and there will display identification message on LCD screen for 5 seconds.
+If the user enters correct password in a period less than 5 seconds since he/she entered first digit, door will be open (relay), green LED will be on, speaker will play simple buzz and there will display identification message on LCD screen for 5 seconds:
 
 ![Captura](https://user-images.githubusercontent.com/71753644/102140972-622f9480-3e60-11eb-9ef1-32ad64f6852f.PNG)
 
 - 3.2 **Counter password > 5" OR wrong password**
 
-If the user enters wrong password or he/she spent more than 5 seconds since first digit was introduced, door will remain closed (relay), red LED will be on, speaker will be mute and there will display warning message on LCD screen for 5 seconds.
+If the user enters wrong password or he/she spent more than 5 seconds since first digit was introduced, door will remain closed (relay), red LED will be on, speaker will be mute and there will display warning message on LCD screen for 5 seconds:
 
 If counter password > 5 seconds:
 
@@ -58,7 +58,7 @@ If wrong password:
 
 - 3.3 **Wrong password for 3 times**
 
-If the user enters incorrect password 3 times in a row, door will remain closed (relay), red LED will blink, speaker will be play simple buzz each 1 second and there will display warning message on LCD screen for 5 seconds.
+If the user enters incorrect password 3 times in a row, door will remain closed (relay), red LED will blink, speaker will be play simple buzz each 1 second and there will display warning message on LCD screen for 5 seconds:
 
 ![Captura](https://user-images.githubusercontent.com/71753644/102141208-bf2b4a80-3e60-11eb-90c2-58dedaf274cd.PNG)
 
