@@ -71,7 +71,7 @@ The following state diagram shows different states of the system:
 ![Captura](https://user-images.githubusercontent.com/71753644/102142331-7e343580-3e62-11eb-915e-22efe96c859c.PNG)
 
 ## Hardware description
-Door lock system is divided in several hardware modules, such as:
+Door lock system is divided into several hardware modules, such as:
 
 - [x] 1. ATMega328P microcontroller
 - [x] 2. Keypad
