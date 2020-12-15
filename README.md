@@ -6,15 +6,15 @@ Guillermo Cortés Orellana. [*Personal repository*](https://github.com/GuicoRM) 
 Omar Bin Rahman. [*Personal repository*](https://github.com/omarbin) :bowtie:
 
 ### Project objectives
-Current project it has been designed as final project of the subject **Digital Electronics 2** at Brno University Of Technology.
+Final project of the subject **Digital Electronics 2** at Brno University Of Technology.
 
-The main purpose of the project is program security software for door lock system based on Arduino.
+The main purpose of the project is to program security software for door lock system based on Arduino.
 
-System counts with 4 possible passwords made for 4 digits which allow the user open the door.
+System counts with 4 possible passwords made of 4 digits which allow the user open the door when password is typed correctly.
 
-Initially, the system's door will stay closed. The user will have to enter her/his personal password in order to open it (as it has been said, there are only 4 possible combinations). If the user enters **correct password**, the door will open and the user can access to the hall. If on the contrary, the user enters **wrong password**, he/she will have another 2 opportunities (in total 3) to unlock the door. Just in the case the user introduces wrong password 3 times in a row, the system will be locked and the access will be forbidden.
+Initially, the system's door will stay closed. The user will have to enter her/his personal password in order to open it (as it has been said, there are only 4 possible combinations). If the user enters **correct password**, the door will open and the user can access to the hall. If on the contrary, the user enters **wrong password**, he/she will have 2 more opportunities (in total 3) to unlock the door. Just in the case the user introduces wrong password 3 times in a row, the system will be locked and the access will be denied.
 
-On the other hand, at the moment the user enters first digit of the password, he/she will have **5 seconds** to complete the rest of the password, otherwise, he/she will have to enter again the code.
+On the other hand, at the moment the user enters first digit of the password, he/she will have **5 seconds** to complete the rest of the password, otherwise, the system will reset and he/she will have to enter the code again.
 
 The following image shows circuit of the system:
 
@@ -24,7 +24,7 @@ All the process is divided in several states:
 
 1. **START**
 
-This is the initial state. Door will be close (relay), state LEDs will be off, speaker will be mute and there will display welcome message on LCD screen:
+This is the initial state. Door will be closed (relay), state LEDs will be off, speaker will be mute and welcome message on LCD screen will be displayed:
 
 ![Captura](https://user-images.githubusercontent.com/71753644/102140762-0b29bf80-3e60-11eb-9cc1-5cc54c87a2e5.PNG)
 
@@ -40,13 +40,13 @@ There will be 3 possibilities:
 
 - 3.1 **Counter password < 5" AND correct password**
 
-If the user enters correct password in a period less than 5 seconds since he/she entered first digit, door will be open (relay), green LED will be on, speaker will play simple buzz and there will display identification message on LCD screen for 5 seconds:
+If the user enters correct password in a period less than 5 seconds since he/she entered first digit, door will be open (relay), green LED will be on, speaker will play simple buzz and welcome message on LCD screen for 5 seconds will be displayed forthe corresponding password:
 
 ![Captura](https://user-images.githubusercontent.com/71753644/102140972-622f9480-3e60-11eb-9ef1-32ad64f6852f.PNG)
 
 - 3.2 **Counter password > 5" OR wrong password**
 
-If the user enters wrong password or he/she spent more than 5 seconds since first digit was introduced, door will remain closed (relay), red LED will be on, speaker will be mute and there will display warning message on LCD screen for 5 seconds:
+If the user enters wrong password or he/she spent more than 5 seconds since first digit was pressed, the door will remain closed (relay), red LED will be on, speaker will be mute and warning message on LCD screen for 5 seconds will be displayed:
 
 If counter password > 5 seconds:
 
@@ -58,7 +58,7 @@ If wrong password:
 
 - 3.3 **Wrong password for 3 times**
 
-If the user enters incorrect password 3 times in a row, door will remain closed (relay), red LED will blink, speaker will be play simple buzz each 1 second and there will display warning message on LCD screen for 5 seconds:
+If the user enters incorrect password 3 times in a row, door will remain closed (relay), red LED will blink every second, speaker will be play simple buzz every second and warning message on LCD screen for 5 seconds will be displayed:
 
 ![Captura](https://user-images.githubusercontent.com/71753644/102141208-bf2b4a80-3e60-11eb-90c2-58dedaf274cd.PNG)
 
@@ -146,18 +146,18 @@ We divided `main.c` in 3 different parts:
     
     It will be carried out scan of keypad using one function created by ourselves and which will be explained later.
     Also, inside this ISR, it will be displayed the state of the door when user enters correct password using **UART** and LCD screen.
-    Besides, it will be disabled current ISR and enabled one of the other two ISR.
+    Besides, current ISR will be disabled and one of the other two ISRs will be enabled.
     
     **ISR(TIMER1_OVF_vect)**   
     
     This ISR will be enable just in the case user enter correct password.
-    The door will be open, speaker will play a sound and LED GREEN will be on.
+    The door will be opened, speaker will play a sound and LED GREEN will be on.
     After 5 seconds, this ISR will be disable and first ISR will be enable again.
     
     **ISR(TIMER2_OVF_vect)**   
     
     This ISR will be enable just in the case user enter wrong password for 3 times.
-    The door will be closed, speaker will play a sound each 1 second and LED RED will blink.
+    The door will be closed, speaker will play a sound each 1 second and LED RED will blink also every second.
     After 5 seconds, this ISR will be disable and first ISR will be enable again.
 
 You can find complete description on [*main.c*](https://github.com/GuicoRM/Final-Project-DE2/blob/main/Final_Project_DE2/Final_Project/Final_Project/main.c).
