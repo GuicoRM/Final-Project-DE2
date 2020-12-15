@@ -142,14 +142,33 @@ We divided `main.c` in 3 different parts:
 - ISR
   - Many ISR have been used, each of them, configured with previous TIMERs:
   
-    **ISR(TIMER0_OVF_vect)**    
+    **ISR(TIMER0_OVF_vect)**   
+    
     It will be carried out scan of keypad using one function created by the programmer and which will be explained later.
     Also, inside this ISR, it will be displayed the state of the door when user enters some correct password using **UART** and LCD screen.
     Besides, it will be disabled current ISR and enabled on of the other two ISR.
+    
+    **ISR(TIMER1_OVF_vect)**   
+    
+    This ISR will be enable just in case user enter correct password.
+    The door will be open, speaker will play a sound and LED GREEN will be on.
+    After 5 seconds, this ISR will be disable and first ISR will be enable again.
+    
+    **ISR(TIMER2_OVF_vect)**   
+    
+    This ISR will be enable just in case user enter wrong password for 3 times.
+    The door will be closed, speaker will play a sound each 1 second and LED RED will blink.
+    After 5 seconds, this ISR will be disable and first ISR will be enable again.
 
-You can find here complete description of [*main.c*](https://github.com/GuicoRM/Final-Project-DE2/blob/main/Final_Project_DE2/Final_Project/Final_Project/main.c).
+You can find complete description on [*main.c*](https://github.com/GuicoRM/Final-Project-DE2/blob/main/Final_Project_DE2/Final_Project/Final_Project/main.c).
 
 ### libraries
+We used several libraries of previous laboratories such as:
+
+- GPIO: [*gpio.h*](https://github.com/GuicoRM/Final-Project-DE2/blob/main/Final_Project_DE2/Final_Project/Final_Project/gpio.h) and [*gpio.c*](https://github.com/GuicoRM/Final-Project-DE2/blob/main/Final_Project_DE2/Final_Project/Final_Project/gpio.c).
+- Timer: [*timer.h*](https://github.com/GuicoRM/Final-Project-DE2/blob/main/Final_Project_DE2/Final_Project/Final_Project/timer.h).
+- LCD: [*lcd_definitions.h*](https://github.com/GuicoRM/Final-Project-DE2/blob/main/Final_Project_DE2/Final_Project/Final_Project/lcd_definitions.h), [*lcd.h*](https://github.com/GuicoRM/Final-Project-DE2/blob/main/Final_Project_DE2/Final_Project/Final_Project/lcd.h) and [*lcd.c*](https://github.com/GuicoRM/Final-Project-DE2/blob/main/Final_Project_DE2/Final_Project/Final_Project/lcd.c).
+- UART: [*uart.h*](https://github.com/GuicoRM/Final-Project-DE2/blob/main/Final_Project_DE2/Final_Project/Final_Project/uart.h) and [*uart.c*](https://github.com/GuicoRM/Final-Project-DE2/blob/main/Final_Project_DE2/Final_Project/Final_Project/uart.c).
 
 ## Video/Animation
 You can find personal video where all the previous features of the system described [*on this link*](https://www.youtube.com/watch?v=qahc68WCkCg&feature=youtu.be).
