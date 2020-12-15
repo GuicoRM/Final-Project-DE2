@@ -141,10 +141,12 @@ We divided `main.c` in 3 different parts:
   
 - ISR
   - Many ISR have been used, each of them, configured with previous TIMERs:
-    - **ISR(TIMER0_OVF_vect)**
-    We will carry out scan of keypad using one function we create and which will be explained later.
-    Also, inside this ISR, we will display the state of the door when user enters some correct password using **UART** and LCD screen.
-    Besides, we will disable current ISR and enable on of the other two ISR.
+  
+    - **ISR(TIMER0_OVF_vect)**    
+    
+    It will be carried out scan of keypad using one function created by the programmer and which will be explained later.
+    Also, inside this ISR, it will be displayed the state of the door when user enters some correct password using **UART** and LCD screen.
+    Besides, it will be disabled current ISR and enabled on of the other two ISR.
 
 You can find here complete description of [*main.c*](https://github.com/GuicoRM/Final-Project-DE2/blob/main/Final_Project_DE2/Final_Project/Final_Project/main.c).
 
