@@ -12,7 +12,7 @@ The main purpose of the project is program security software for door lock syste
 
 System counts with 4 possible passwords made for 4 digits which allow the user open the door.
 
-Initially, the system's door will stay closed. The user will have to enter her/his personal password in order to open it (as it has been said, there are only 4 possible combinations). If the user enters **correct password**, the door will open and the user can access to the hall. If on the contrary, the user enters **wrong password**, he/she will have another 2 opportunities (in total 3) to unlock the door. Just in case the user introduces wrong password 3 times in a row, the system will be locked and the access will be forbidden.
+Initially, the system's door will stay closed. The user will have to enter her/his personal password in order to open it (as it has been said, there are only 4 possible combinations). If the user enters **correct password**, the door will open and the user can access to the hall. If on the contrary, the user enters **wrong password**, he/she will have another 2 opportunities (in total 3) to unlock the door. Just in the case the user introduces wrong password 3 times in a row, the system will be locked and the access will be forbidden.
 
 On the other hand, at the moment the user enters first digit of the password, he/she will have **5 seconds** to complete the rest of the password, otherwise, he/she will have to enter again the code.
 
@@ -123,7 +123,7 @@ In the following lines it will be explained different functions of this modules 
     You can find the explanations on [*Mr.Fryza GitHub*](https://github.com/tomas-fryza/Digital-electronics-2/tree/master/Labs/02-leds).
 
 ## Code description and simulations
-In the following it is explained the structure of the program and different libraries that have been used.
+In the following lines it is explained the structure of the program and different libraries that have been used.
 
 The structure of the program is similar to other programs students created during the semester, to know of:
 
@@ -144,19 +144,19 @@ We divided `main.c` in 3 different parts:
   
     **ISR(TIMER0_OVF_vect)**   
     
-    It will be carried out scan of keypad using one function created by the programmer and which will be explained later.
-    Also, inside this ISR, it will be displayed the state of the door when user enters some correct password using **UART** and LCD screen.
-    Besides, it will be disabled current ISR and enabled on of the other two ISR.
+    It will be carried out scan of keypad using one function created by ourselves and which will be explained later.
+    Also, inside this ISR, it will be displayed the state of the door when user enters correct password using **UART** and LCD screen.
+    Besides, it will be disabled current ISR and enabled one of the other two ISR.
     
     **ISR(TIMER1_OVF_vect)**   
     
-    This ISR will be enable just in case user enter correct password.
+    This ISR will be enable just in the case user enter correct password.
     The door will be open, speaker will play a sound and LED GREEN will be on.
     After 5 seconds, this ISR will be disable and first ISR will be enable again.
     
     **ISR(TIMER2_OVF_vect)**   
     
-    This ISR will be enable just in case user enter wrong password for 3 times.
+    This ISR will be enable just in the case user enter wrong password for 3 times.
     The door will be closed, speaker will play a sound each 1 second and LED RED will blink.
     After 5 seconds, this ISR will be disable and first ISR will be enable again.
 
@@ -212,7 +212,7 @@ void keypad_setup_pin(void)
 }
 ```
 
-- **uint8_t keypad_scan(void)**: this function will be used show which button is pushed. We will send 'low level' per ROW and then we will check the state of different COLUMNS:
+- **uint8_t keypad_scan(void)**: this function will be used to show which button is pushed. We will send 'low level' per ROW and then we will check the state of different COLUMNS to find out it:
 
 ```C
 uint8_t keypad_scan(void){ 
@@ -344,7 +344,7 @@ uint8_t keypad_scan(void){
 	return key;									// Return the value of the key which is pushed
 }
 ```
-You can find the code of complete keypad.c [*on this link*](https://github.com/GuicoRM/Final-Project-DE2/blob/main/Final_Project_DE2/Final_Project/Final_Project/keypad.c).
+You can find the code of complete **keypad.c** [*on this link*](https://github.com/GuicoRM/Final-Project-DE2/blob/main/Final_Project_DE2/Final_Project/Final_Project/keypad.c).
 
 ## Video/Animation
 You can find personal video where all the previous features of the system described [*on this link*](https://www.youtube.com/watch?v=qahc68WCkCg&feature=youtu.be).
