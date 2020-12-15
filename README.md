@@ -3,7 +3,7 @@
 ### Team members
 Guillermo Cortés Orellana. [*Personal repository*](https://github.com/GuicoRM) :bowtie:
 
-Omar Bin Rahman. ['*Personal repository*'](https://github.com/omarbin) :bowtie:
+Omar Bin Rahman. [*Personal repository*](https://github.com/omarbin) :bowtie:
 
 ### Project objectives
 Current project it has been designed as final project of the subject **Digital Electronics 2** at Brno University Of Technology.
@@ -86,7 +86,7 @@ In the following lines it will be explain different functions of this modules an
 
     This module is similar to the microcontroller we have used for the semester. 
 
-    You can find the datasheet ['*on this link*'](http://ww1.microchip.com/downloads/en/DeviceDoc/ATmega48A-PA-88A-PA-168A-PA-328-P-DS-DS40002061B.pdf).
+    You can find the datasheet [*on this link*](http://ww1.microchip.com/downloads/en/DeviceDoc/ATmega48A-PA-88A-PA-168A-PA-328-P-DS-DS40002061B.pdf).
 
 - **Keypad**
 
@@ -96,7 +96,7 @@ In the following lines it will be explain different functions of this modules an
 
     It is possible to configure keypad using some libraries by default included in Arduino, but we have programmed our own: `keypad.c`. 
 
-    You can find the connection of keypad and how it works ['*on this link*'](https://www.circuitbasics.com/how-to-set-up-a-keypad-on-an-arduino/).
+    You can find the connection of keypad and how it works [*on this link*](https://www.circuitbasics.com/how-to-set-up-a-keypad-on-an-arduino/).
 
 - **Speaker**
 
@@ -108,32 +108,32 @@ In the following lines it will be explain different functions of this modules an
 
     One of the others hardware modules we have introduced on this topic is the **relay**. We will use it to simulate a door.
     
-    You can find the connection of relay and how it works ['*on this link*'](https://www.circuitbasics.com/setting-up-a-5v-relay-on-the-arduino/).
+    You can find the connection of relay and how it works [*on this link*](https://www.circuitbasics.com/setting-up-a-5v-relay-on-the-arduino/).
 
 - **LCD screen**
 
     This module is similar to the LCD screen we have used for the semester. We will use it to display different messages.
 
-    You can find the explanations on ['*Mr.Fryza GitHub*'](https://github.com/tomas-fryza/Digital-electronics-2/tree/master/Labs/06-lcd).
+    You can find the explanations on [*Mr.Fryza GitHub*](https://github.com/tomas-fryza/Digital-electronics-2/tree/master/Labs/06-lcd).
 
 - **LEDs**
 
     This module is similar to the LEDs we have used for the semester. We will use them to signal different events.
 
-    You can find the explanations on ['*Mr.Fryza GitHub*'](https://github.com/tomas-fryza/Digital-electronics-2/tree/master/Labs/02-leds).
+    You can find the explanations on [*Mr.Fryza GitHub*](https://github.com/tomas-fryza/Digital-electronics-2/tree/master/Labs/02-leds).
 
 ## Code description and simulations
 Write your text here.
 
 ## Video/Animation
-You can find personal video where all the previous features of the system described ['*on this link*'](https://www.youtube.com/watch?v=qahc68WCkCg&feature=youtu.be).
+You can find personal video where all the previous features of the system described [*on this link*](https://www.youtube.com/watch?v=qahc68WCkCg&feature=youtu.be).
 
 **Note:** background noise is from the computer itself, not the door security system.
 
 ## References
-1. ['*How keypad works*'](https://arduinogetstarted.com/tutorials/arduino-keypad).
+1. [*How keypad works*](https://arduinogetstarted.com/tutorials/arduino-keypad).
 
-2. ['*How speaker works*'](https://shallowsky.com/arduino/class/buzzer.html#:~:text=A%20%22piezo%20buzzer%22%20is%20basically,the%20crystal%20can%20make%20sound.).
+2. [*How speaker works*](https://shallowsky.com/arduino/class/buzzer.html#:~:text=A%20%22piezo%20buzzer%22%20is%20basically,the%20crystal%20can%20make%20sound.).
 
-3. ['*How relays works*'](https://maker.pro/arduino/projects/driving-a-relay-with-an-arduino#:~:text=*%20A%20relay%20basically%20allows%20a,off%20a%20higher%20power%20circuit).
+3. [*How relays works*](https://maker.pro/arduino/projects/driving-a-relay-with-an-arduino#:~:text=*%20A%20relay%20basically%20allows%20a,off%20a%20higher%20power%20circuit).
 
