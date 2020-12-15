@@ -176,7 +176,7 @@ On **keypad.h**, pins and functions prototypes have been described. You can find
 
 On **keypad.c**, there are codified 2 functions:
 
-- void keypad_setup_pin(void): this function will be used to set different ROWS and COLUMNS of the keypad:
+- **void keypad_setup_pin(void)**: this function will be used to set different ROWS and COLUMNS of the keypad:
 
 ```C
 void keypad_setup_pin(void)
@@ -211,6 +211,140 @@ void keypad_setup_pin(void)
 		
 }
 ```
+
+- **uint8_t keypad_scan(void)**: this function will be used show which button is pushed. We will send 'low level' per ROW and then we will check the state of different COLUMNS:
+
+```C
+uint8_t keypad_scan(void){ 
+	
+	uint8_t key = 12;
+	
+	for(uint8_t i = 0; i<=3; i++){							// Loop to go over different ROWS
+		
+		if(i==0){								// First iteration
+															
+			GPIO_write_high(&PORTC, ROW4);					// Put ROW4 in HIGH level
+			GPIO_write_low(&PORTC, ROW1);					// Put ROW1 in LOW level
+			
+		}else if(i==1){								// Second iteration
+															
+			GPIO_write_high(&PORTC, ROW1);					// Put ROW1 in HIGH level
+			GPIO_write_low(&PORTC, ROW2);					// Put ROW2 in LOW level
+			
+		}else if(i==2){								// Third iteration
+			
+			GPIO_write_high(&PORTC, ROW2);					// Put ROW2 in HIGH level
+			GPIO_write_low(&PORTC, ROW3);					// Put ROW3 in LOW level
+			
+		}else if(i==3){								// Fourth iteration
+			
+			GPIO_write_high(&PORTC, ROW3);					// Put ROW3 in HIGH level
+			GPIO_write_low(&PORTC, ROW4);					// Put ROW4 in LOW level
+		}
+		
+		for(uint8_t j = 0; j<=2; j++){						// Loop to go over different COLUMNS
+			
+			if (GPIO_read(&PIND,COL1) == 1)					// Read the value of COLUMN1 and compare it to '1' in order to know which key is pushed
+			{
+				if (i == 0)						// Previous first iteration (ROW1 in LOW level)
+				{
+					key = 1;					// We push key '1'
+					i=4;						// End of first loop
+					j=3;						// End of second loop
+					GPIO_write_high(&PORTC, ROW1);			// Put ROW1 in HIGH level again
+					
+				}else if(i == 1){					// Previous second iteration (ROW2 in LOW level)
+					
+					key = 4;					// We push the key '4'
+					i=4;						// End of first loop
+					j=3;						// End of second loop
+					GPIO_write_high(&PORTC, ROW2);			// Put ROW2 in HIGH level again
+					
+				}else if(i == 2){					// Previous third iteration (ROW3 in LOW level)
+								
+					key = 7;					// We push the key '7'
+					i=4;						// End of first loop
+					j=3;						// End of second loop
+					GPIO_write_high(&PORTC, ROW3);			// Put ROW3 in HIGH level again
+					
+				}else if(i == 3){					// Previous fourth iteration (ROW4 in LOW level)
+					
+					key = 10;					// We push the key '*'
+					i=4;						// End of first loop
+					j=3;						// End of second loop
+					GPIO_write_high(&PORTC, ROW4);			// Put ROW4 in HIGH level again
+				}
+				
+			}else if(GPIO_read(&PINC,COL2) == 1){				// Read the value of COLUMN2 and compare it to '1' in order to know which key is pushed
+				
+				if (i == 0)						// Previous first iteration (ROW1 in LOW level)
+				{
+					key = 2;					// We push the key '2'
+					i=4;						// End of first loop
+					j=3;						// End of second loop
+					GPIO_write_high(&PORTC, ROW1);			// Put ROW1 in HIGH level again
+					
+				}else if(i == 1){					// Previous second iteration (ROW2 in LOW level)
+					
+					key = 5;					// We push the key '5'
+					i=4;						// End of first loop
+					j=3;						// End of second loop
+					GPIO_write_high(&PORTC, ROW2);			// Put ROW2 in HIGH level again
+					
+				}else if(i == 2){					// Previous third iteration (ROW3 in LOW level)
+				
+					key = 8;					// We push the key '8'
+					i=4;						// End of first loop
+					j=3;						// End of second loop
+					GPIO_write_high(&PORTC, ROW3);			// Put ROW3 in HIGH level again
+					
+				}else if(i == 3){					// Previous fourth iteration (ROW4 in LOW level)
+					
+					key = 0;					// We push the key '0'
+					i=4;						// End of first loop
+					j=3;						// End of second loop
+					GPIO_write_high(&PORTC, ROW4);			// Put ROW4 in HIGH level again
+				}
+				
+			}else if(GPIO_read(&PINC,COL3) == 1){				// Read the value of COLUMN3 and compare it to '1' in order to know which key is pushed
+				
+				if (i == 0)						// Previous first iteration (ROW1 in LOW level)
+				{
+					key = 3;					// We push the key '3'
+					i=4;						// End of first loop	
+					j=3;						// End of second loop
+					GPIO_write_high(&PORTC, ROW1);			// Put ROW1 in HIGH level again
+				
+				}else if(i == 1){					// Previous second iteration (ROW2 in LOW level)
+				
+					key = 6;					// We push the key '6'
+					i=4;						// End of first loop
+					j=3;						// End of second loop
+					GPIO_write_high(&PORTC, ROW2);			// Put ROW2 in HIGH level again
+				
+				}else if(i == 2){					// Previous third iteration (ROW3 in LOW level)
+				
+					key = 9;					// We push the key '9'
+					i=4;						// End of first loop
+					j=3;						// End of second loop
+					GPIO_write_high(&PORTC, ROW3);			// Put ROW3 in HIGH level again
+				
+				}else if(i == 3){					// Previous fourth iteration (ROW4 in LOW level)
+				
+					key = 11;					// We push the key '#'
+					i=4;						// End of first loop
+					j=3;						// End of second loop
+					GPIO_write_high(&PORTC, ROW4);			// Put ROW4 in HIGH level again
+				}
+			}								// end 'if' for  COLuMNS
+			
+		}									// end 2º 'for'
+	}										// end 1º 'for'
+	
+	return key;									// Return the value of the key which is pushed
+}
+```
+You can find the code of complete keypad.c [*on this link*](https://github.com/GuicoRM/Final-Project-DE2/blob/main/Final_Project_DE2/Final_Project/Final_Project/keypad.c).
 
 ## Video/Animation
 You can find personal video where all the previous features of the system described [*on this link*](https://www.youtube.com/watch?v=qahc68WCkCg&feature=youtu.be).
