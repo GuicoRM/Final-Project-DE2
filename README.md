@@ -123,7 +123,13 @@ In the following lines it will be explain different functions of this modules an
     You can find the explanations on [*Mr.Fryza GitHub*](https://github.com/tomas-fryza/Digital-electronics-2/tree/master/Labs/02-leds).
 
 ## Code description and simulations
-Write your text here.
+In the following it is explained the structure of the program and different functions that have been used.
+
+The structura of the progrma is similar to other programs students created during the semester, to know of:
+
+- main.c
+- ISR
+- other libraries
 
 ## Video/Animation
 You can find personal video where all the previous features of the system described [*on this link*](https://www.youtube.com/watch?v=qahc68WCkCg&feature=youtu.be).
