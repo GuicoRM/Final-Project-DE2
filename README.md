@@ -80,7 +80,7 @@ Door lock system is divided into several hardware modules, such as:
 - [x] 5. LCD screen
 - [x] 6. LEDs
 
-In the following lines it will be explain different functions of this modules and their relation with complete system:
+In the following lines it will be explained different functions of this modules and their relation with complete system:
 
 - **AMega328P microcontroller**
 
