@@ -172,6 +172,46 @@ We used several libraries of previous laboratories such as:
 
 We also created one library for keypad: `keypad.h` and `keypad.c`
 
+On **keypad.h**, pins and functions prototypes have been described. You can find the code [*on this link*](https://github.com/GuicoRM/Final-Project-DE2/blob/main/Final_Project_DE2/Final_Project/Final_Project/keypad.h).
+
+On **keypad.c**, there are codified 2 functions:
+
+- void keypad_setup_pin(void): this function will be used to set different ROWS and COLUMNS of the keypad:
+
+```C
+void keypad_setup_pin(void)
+{
+	/************************ CONFIGURATION OF KEYPAD-ROWS ************************/
+	/* PIN PC0 -> ROW1 */
+	GPIO_config_output(&DDRC, ROW1);						// Set pin as OUTPUT in Data Direction Register... (PIN -> OUTPUT)
+	GPIO_write_high(&PORTC, ROW1);							// Put in HIGH level
+	
+	/* PIN PC1 -> ROW2 */
+	GPIO_config_output(&DDRC, ROW2);						// Set pin as OUTPUT in Data Direction Register... (PIN -> OUTPUT)
+	GPIO_write_high(&PORTC, ROW2);							// Put in HIGH level
+	
+	/* PIN PC2 -> ROW3 */
+	GPIO_config_output(&DDRC, ROW3);						// Set pin as OUTPUT in Data Direction Register... (PIN -> OUTPUT)
+	GPIO_write_high(&PORTC, ROW3);							// Put in HIGH level
+	
+	/* PIN PC3 -> ROW4 */
+	GPIO_config_output(&DDRC, ROW4);						// Set pin as OUTPUT in Data Direction Register... (PIN -> OUTPUT)
+	GPIO_write_high(&PORTC, ROW4);							// Put in HIGH level
+	
+	/*********************** CONFIGURATION OF KEYPAD-COLUMNS ***********************/
+	/* PIN PD3 -> COL1 */
+	GPIO_config_input_pullup(&DDRD, COL1);					// Set pin as INPUT in Data Direction Register... (PIN -> INPUT)
+	
+	/* PIN PC5 -> COL2 */
+	GPIO_config_input_pullup(&DDRC, COL2);					// Set pin as INPUT in Data Direction Register... (PIN -> INPUT)
+	
+	/* PIN PC4 -> COL3 */
+	GPIO_config_input_pullup(&DDRC, COL3);					// Set pin as INPUT in Data Direction Register... (PIN -> INPUT)	
+	
+		
+}
+```
+
 ## Video/Animation
 You can find personal video where all the previous features of the system described [*on this link*](https://www.youtube.com/watch?v=qahc68WCkCg&feature=youtu.be).
 
