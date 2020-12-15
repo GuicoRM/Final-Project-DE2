@@ -84,7 +84,7 @@ In the following lines it will be explained different functions of this modules 
 
 - **AMega328P microcontroller**
 
-    This module is similar to the microcontroller we have used for the semester. 
+    This module is similar to the microcontroller we have used during the semester. 
 
     You can find the datasheet [*on this link*](http://ww1.microchip.com/downloads/en/DeviceDoc/ATmega48A-PA-88A-PA-168A-PA-328-P-DS-DS40002061B.pdf).
 
@@ -100,7 +100,7 @@ In the following lines it will be explained different functions of this modules 
 
 - **Speaker**
 
-    One of the others hardware modules we have introduced on this topic is the **speaker**. Its purpose is plays simple buzz when the user enter the password.
+    One of the others hardware modules we have introduced on this topic is the **speaker**. Its purpose is plays simple buzz when the user enters the password.
     
     The way we have to get the sound is setting the pin of the speaker as an output and sending high level to play the buzz. 
 
@@ -112,13 +112,13 @@ In the following lines it will be explained different functions of this modules 
 
 - **LCD screen**
 
-    This module is similar to the LCD screen we have used for the semester. We will use it to display different messages.
+    This module is similar to the LCD screen we have used during the semester. We will use it to display different messages.
 
     You can find the explanations on [*Mr.Fryza GitHub*](https://github.com/tomas-fryza/Digital-electronics-2/tree/master/Labs/06-lcd).
 
 - **LEDs**
 
-    This module is similar to the LEDs we have used for the semester. We will use them to signal different events.
+    This module is similar to the LEDs we have used during the semester. We will use them to signal different events.
 
     You can find the explanations on [*Mr.Fryza GitHub*](https://github.com/tomas-fryza/Digital-electronics-2/tree/master/Labs/02-leds).
 
