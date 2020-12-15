@@ -143,7 +143,6 @@ We divided `main.c` in 3 different parts:
   - Many ISR have been used, each of them, configured with previous TIMERs:
   
     **ISR(TIMER0_OVF_vect)**    
-    
     It will be carried out scan of keypad using one function created by the programmer and which will be explained later.
     Also, inside this ISR, it will be displayed the state of the door when user enters some correct password using **UART** and LCD screen.
     Besides, it will be disabled current ISR and enabled on of the other two ISR.
