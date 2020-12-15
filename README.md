@@ -128,84 +128,18 @@ In the following it is explained the structure of the program and different libr
 The structure of the program is similar to other programs students created during the semester, to know of:
 
 - main.c
-- ISR
 - libraries
 
 ### main.c
+We divided `main.c` in 3 different parts:
 
-```C
-/* Main function -----------------------------------------------------*/
-int main(void)
-{
-	/*************************** Configuration of LEDs ***************************/
-	
-	/*LED_GREEN*/
-	GPIO_config_output(&DDRB, LED_GREEN);				// Set LED GREEN as an output
-	GPIO_write_low(&PORTB, LED_GREEN);					// Initially led OFF because active HIGH
-	
-	/*LED_RED*/
-	GPIO_config_output(&DDRB, LED_RED);					// Set LED RED as an output
-	GPIO_write_low(&PORTB, LED_RED);					// Initially led OFF because active HIGH
-	
-	/*********************** Configuration of the DOOR (RELAY) **********************/
-	
-	GPIO_config_output(&DDRB, DOOR);					// Set pin of the DOOR as an output
-	GPIO_write_high(&PORTB, DOOR);						// Initially the door is closed (DOOR = '1')
-	
-	/************************* Configuration of the SPEAKER *************************/
-	
-	GPIO_config_output(&DDRB, SPEAKER);					// Set pin of the SPEAKER as an output
-	GPIO_write_low(&PORTB, SPEAKER);					// Initially the SPEAKER is OFF (SPEAKER = '0')
-		
-	/************************* Configuration pins of KEYPAD *************************/
-	
-	keypad_setup_pin();									// Set the different keys of keypad
-	
-	/**************************** Configuration of LCD ******************************/
-	
-	// Initialize LCD display
-	lcd_init(LCD_DISP_ON);
-	
-	// Put string(s) at LCD display
-	lcd_gotoxy(0, 0);
-	lcd_puts("Welcome to CorBin ST ");	
-	lcd_puts("                   ");
-	lcd_puts("Enter your code:");
-	lcd_puts("    ");
-	lcd_puts("        ----");	
-	
-	/************************** Configuration of TIMERs **************************/
-	
-	/*TIMER/COUNTER0*/
-	// Configure Timer/Counter0 to carry out scan on the keypad each 16 us
-    TIM0_overflow_16us();
-    TIM0_overflow_interrupt_enable();
-	
-	/*TIMER/COUNTER1*/ 
-	// Configure Timer/Counter1 to open the door, play a sound on the speaker and turn on LED GREEN
-	TIM1_overflow_1s();
-	TIM1_overflow_interrupt_disable();
-	
-	/*TIMER/COUNTER2*/
-	// Configure Timer/Counter2 for the waiting state where the program is suspended for 5 seconds
-	TIM2_overflow_16ms();
-	TIM2_overflow_interrupt_disable();
-	
-	// Enables interrupts by setting the global interrupt mask
-	sei();
+- Defines, includes and global variables
+- main
+- ISR
 
-	/*********************************** UART **********************************/
-		
-	// Initialize UART to asynchronous, 8N1, 9600
-	uart_init(UART_BAUD_SELECT(9600, F_CPU));	
-	
-	while (1) 
-    {
-		 /* Empty loop. All subsequent operations are performed exclusively 
-          * inside interrupt service routines ISRs */
-    }
-}
-```
+You can find here complete [*main.c*](https://github.com/GuicoRM/Final-Project-DE2/blob/main/Final_Project_DE2/Final_Project/Final_Project/main.c) with all lines commented and explained.
+
+### libraries
 
 ## Video/Animation
 You can find personal video where all the previous features of the system described [*on this link*](https://www.youtube.com/watch?v=qahc68WCkCg&feature=youtu.be).
