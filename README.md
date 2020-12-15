@@ -134,10 +134,12 @@ The structure of the program is similar to other programs students created durin
 We divided `main.c` in 3 different parts:
 
 - Defines, includes and global variables
-- main
+-- rrgrg
+- -fgrg 
+- Main function
 - ISR
 
-You can find here complete [*main.c*](https://github.com/GuicoRM/Final-Project-DE2/blob/main/Final_Project_DE2/Final_Project/Final_Project/main.c) with all lines commented and explained.
+You can find here complete description of [*main.c*](https://github.com/GuicoRM/Final-Project-DE2/blob/main/Final_Project_DE2/Final_Project/Final_Project/main.c).
 
 ### libraries
 
