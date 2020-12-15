@@ -1,8 +1,8 @@
 /*
- * gpio.c
+ * keypad.c
  *
  * Created: 02/12/2020 21:06:48
- *  Author: Guillermo Cortés Orellana & Omar Bin Rahman  
+ *  Author: Guillermo CortÃ©s Orellana & Omar Bin Rahman  
  */ 
 
 /***********************************************************************
@@ -10,7 +10,7 @@
  * keypad library for AVR-GCC.
  * ATmega328P (Arduino Uno), 16 MHz, AVR 8-bit Toolchain 3.6.2
  *
- * Copyright (c) Guillermo Cortés Orellana & Omar Bin Rahman 
+ * Copyright (c) Guillermo CortÃ©s Orellana & Omar Bin Rahman 
  *
  **********************************************************************/
 
@@ -190,8 +190,8 @@ uint8_t keypad_scan(void){
 				}
 			}												// end 'if' for  COLuMNS
 			
-		}													// end 2º 'for'
-	}														// end 1º 'for'
+		}													// end 2Âº 'for'
+	}														// end 1Âº 'for'
 	
 	return key;												// Return the value of the key which is pushed
 }
